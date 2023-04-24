@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Increment Counter</title>
+  </head>
+  <body>
+    <h1>Increment</h1>
+    <p>Counter: <span id="counter">0</span></p>
+    <button id="increment-btn">Increment</button>
+
+    <script>
+      // Находим элементы на странице
+      const counterEl = document.getElementById("counter");
+      const incrementBtn = document.getElementById("increment-btn");
+
+      // Назначаем обработчик событий на клик кнопки increment
+      incrementBtn.addEventListener("click", () => {
+        // Получаем текущее значение счетчика
+        let counter = parseInt(counterEl.textContent);
+        // Увеличиваем значение счетчика на 1
+        counter++;
+        // Обновляем значение счетчика на странице
+        counterEl.textContent = counter;
+      });
+    </script>
+  </body>
+</html>
